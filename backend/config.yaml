@@ -1,0 +1,32 @@
+openai_api_key: "sk-secret-1234"
+user_prompt: |-
+  You are a decoder for images sent to you.
+  The image is a picture of a gas meter with 8 digits.
+  The reading will always be above 57000.000 and below 60000.000.
+  The meter is rotary meter, meaning you might be able to extract better numbers by looking at the
+  top or bottom of the individual digits to detect possible preceding or succeeding digits.
+  Always answer in the form xxxxx.xx without any deviations.
+  If you cannot decode the image, just reply with unreadable.
+
+chat_model: "gpt-4o-mini"
+
+database_path: "gorm.db"
+
+port: "8080"
+
+brightness_thresholds:
+  min: 20
+  max: 220
+
+camera_ip: "192.168.0.215"
+
+camera_settings:
+  led_intensity: "220"
+  quality: "4"
+  special_effect: "1"
+  gain_ceiling: "1"
+  wb_mode: "0"
+  offset_x: "950"
+  offset_y: "830"
+  width: "320"
+  height: "60"
